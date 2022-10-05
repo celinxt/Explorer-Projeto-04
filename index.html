@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Formulário</title>
+  </head>
+  <body>
+    <header>
+      <!-- Header title -->
+      <h2 id="hd-title">Crie e compartilhe seu evento.</h2>
+
+      <!-- Header description -->
+      <p id="id-desc">
+        O primeiro passo, é preencher esse formulário de inscrição.
+      </p>
+    </header>
+    <main>
+      <form action="#">
+        <!-- Event information title -->
+        <h3 class="form-title">Informações do evento</h3>
+
+        <!-- Input #1 -->
+
+        <label for="titulo" class="p-form">
+          Título do evento <span class="place">(mínimo 8 caracteres)</span>
+        </label>
+        <input
+          type="text"
+          id="titulo"
+          for="link"
+          class="input-style"
+          required
+        />
+
+        <!-- Input #2 -->
+        <label for="link" class="p-form">
+          Link do evento <span class="place">(comece com https://)</span>
+        </label>
+        <input type="text" id="link" class="input-style" required />
+
+        <!-- Input #3 -->
+        <label for="wpp-number" class="p-form">
+          Whatsapp para contato <span class="place">(somente números)</span>
+        </label>
+        <input type="text" id="wpp-number" class="input-style" required />
+
+        <!-- Textarea -->
+        <label for="textarea" class="p-form">Informações extras</label>
+        <textarea id="textarea" class="input-style"></textarea>
+
+        <!-- Select -->
+        <label for="select" class="p-form">Categoria</label>
+        <select id="select" class="input-style">
+          <option value="none" id="disabled" disabled selected>
+            Tipo de evento
+          </option>
+          <option value="live" class="op">Ao vivo</option>
+          <option value="podcast" class="op">Podcast</option>
+          <option value="mentorship" class="op">Mentoria</option>
+        </select>
+
+        <!-- Privacity title -->
+        <h3 class="form-title space">Privacidade</h3>
+
+        <!-- Admin email -->
+        <label for="email" class="p-form">
+          E-mail do administrador
+          <span class="place">(digite um email válido)</span>
+        </label>
+        <input type="text" id="email" class="input-style" required />
+
+        <!-- Password -->
+        <label for="pass" class="p-form">
+          Senha de acesso para os participantes
+          <span class="place">(minimo 8 caracteres)</span>
+        </label>
+        <input type="text" id="pass" class="input-style" required />
+
+        <!-- Checkbox -->
+        <label for="check" class="p-form" id="check">
+          <input type="checkbox" id="check" />
+          Evento privado
+        </label>
+
+        <!-- Date title -->
+        <h3 class="form-title space">Dia e hora</h3>
+
+        <!-- Date and time -->
+        <div id="date-time">
+          <!-- Date -->
+          <div id="date">
+            <label for="date" class="date-label"> Data </label>
+            <input type="date" id="date" class="date-style" />
+          </div>
+
+          <!-- Start time -->
+          <div id="time-start">
+            <label for="start" class="date-label"> Das </label>
+            <input type="time" id="start" class="time-style" />
+          </div>
+
+          <!-- End time -->
+          <div id="time-end">
+            <label for="end" class="date-label"> Até </label>
+            <input type="time" id="end" class="time-style" />
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <input type="submit" id="btn" value="Salvar evento" />
+      </form>
+    </main>
+  </body>
+</html>
